@@ -1,0 +1,569 @@
+<html data-theme="winter">
+
+<head>
+  <title>Nyasa | News</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="built_styles.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <style>
+    .activePage {
+      color: black;
+      font-weight: bold;
+    }
+
+    .newsImgHt {
+      margin-top: 5px;
+    }
+
+    .newImgbox {
+      height: inherit;
+      padding: 10px;
+      margin-bottom: 0px;
+    }
+
+    /* CSS for the popup container */
+.popup {
+  display: none;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 999; /* Ensure it's on top of everything */
+  overflow: auto; /* Allow scrolling if the image is larger than the viewport */
+}
+
+/* Style the image inside the popup */
+.popup img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+/* CSS for the background blur effect */
+.blurred-background {
+  filter: blur(5px); /* Adjust the blur strength as needed */
+}
+
+
+  </style>
+</head>
+
+<body>
+<!--Navbar-->
+<div id="nav-placeholder"></div>
+
+  <!-- hero -->
+  <div class="hero min-h-screen bg-base-100">
+    <div class="flex-col hero-content lg:flex-row-reverse">
+      <img src="../Assets/news.png" loading="lazy" class="w-5/6 lg:w-3/5 mt-12 lg:mt-16">
+      <div class="px-8 lg:px-0 lg:mr-16">
+        <h1 class="mb-12 text-5xl font-bold">
+          News
+        </h1>
+        <p class=" text-lg mb-5">
+          Our activities and initiatives have been featured in several news and media outlets
+        </p>
+        <a href="#news" class="btn btn-primary">Know More &nbsp;
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- news -->
+  <div class="hero bg-base-400 py-16" id="news">
+    <div class="flex-col hero-content">
+      <h1 class="mb-8 text-5xl font-bold">
+        News Features
+      </h1>
+      <div class="flex flex justify-center lg:flex-row flex-wrap flex-col gap-8">
+
+        <!-- add news on 19 sept 2023 -->
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500" id="cardImage">
+            <figure><img src="../Assets/news/rajsthan_patrika.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>24-06-2023</div>
+            </div>
+            <h2 class="card-title">Rajasthan Patrika</h2>
+            <p>Summer Camp at IIT: Children learnt skills to make soft toys and clay vessels</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://epaper.patrika.com/Ahmedabad?eid=55&edate=24/06/2023&pgid=1011152&device=desktop&view=2"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+      
+
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500">
+            <figure class=""><img src="../Assets/news/gujratsmash3.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>11-06-2023</div>
+            </div>
+            <h2 class="card-title">Gujarat Samachar</h2>
+            <p>Two social outreach programmes of IITGN help disadvantaged children, women, and youth find their hidden
+              potential</p>
+            <!-- Date: 11-06-2023 -->
+            <!-- <div class="card-actions justify-end pt-4">
+              <a href="https://epaper.patrika.com/Ahmedabad?eid=55&edate=24/06/2023&pgid=1011152&device=desktop&view=2"
+              target="_blank"  class="btn btn-primary">Read article</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500">
+            <figure><img src="../Assets/news/gujratsmash2.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>11-06-2023</div>
+            </div>
+            <h2 class="card-title">Gujarat Samachar – Gandhinagar</h2>
+            <p>Camp for children, women, and youth at IIT</p>
+            <!-- Date: 11-06-2023 -->
+            <!-- <div class="card-actions justify-end pt-4">
+              <a href="https://epaper.patrika.com/Ahmedabad?eid=55&edate=24/06/2023&pgid=1011152&device=desktop&view=2"
+              target="_blank"  class="btn btn-primary">Read article</a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Hidden popup container for full-screen image -->
+        <div id="imagePopup" class="popup">
+          <img id="popupImage" src="" alt="Popup Image">
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500">
+            <figure class="newsImgHt"><img src="../Assets/news/sandeshgn.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>11-06-2023</div>
+            </div>
+            <h2 class="card-title">Sandesh Gandhinagar</h2>
+            <p>Unique initiative by IIT Gandhinagar: Campaign to find hidden potential of disadvantaged children
+              through Summer Camp</p>
+            <!-- <div class="card-actions justify-end pt-4">
+              <a href="https://epaper.patrika.com/Ahmedabad?eid=55&edate=24/06/2023&pgid=1011152&device=desktop&view=2"
+              target="_blank"  class="btn btn-primary">Read article</a>
+            </div> -->
+          </div>
+        </div>
+
+        
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500">
+            <figure><img src="../Assets/news/city_life.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>13-06-2023</div>
+            </div>
+            <h2 class="card-title">Sandesh City Life</h2>
+            <p>‘Anand mela’ held at IIT Gandhinagar – Children’s creativity got wings through fun with learning.</p>
+            <!-- Date: 11-06-2023 -->
+            <div class="card-actions justify-end pt-4">
+              <a href="https://sandesh.com/epaper/sub?name=City%20Life&path=epaper/2023/06/13/c-923841686602933.jpeg&date=2023-06-13"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500">
+            <figure class="newsImgHt"><img src="../Assets/news/Ahmdamirror.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>13-06-2023</div>
+            </div>
+            <h2 class="card-title">Ahmedabad Mirror</h2>
+            <p>IITGN’s successful outreach programmes</p>
+            <!-- Date: 11-06-2023 -->
+            <!-- <div class="card-actions justify-end pt-4">
+              <a href="https://epaper.patrika.com/Ahmedabad?eid=55&edate=24/06/2023&pgid=1011152&device=desktop&view=2"
+              target="_blank"  class="btn btn-primary">Read article</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="card w-72 bg-base-100 shadow-lg ">
+          <div class="newImgbox bg-base-500">
+            <figure><img src="../Assets/news/gujarati_smachar.png" loading="lazy" alt="Shoes" /></figure>
+          </div>
+          <div class="card-body">
+            <div class="flex items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                </svg>
+              </div>
+              <div>28-04-2023</div>
+            </div>
+            <h2 class="card-title">Gujarat Samachar Plus </h2>
+            <p> Nyasa – Imparting education to needy children</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://epaper.gujaratsamachar.com/view_article/gujarat-samachar-plus/28-04-2023/1/102689"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/unn.png" loading="lazy" alt="Shoes" style="margin-top: 30px;" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">UNN</h2>
+            <p>Hillary Clinton during visit to IIT Gandhinagar, She also visit the Sanjeevani Health Camp organized by
+              Nyasa at Palaj village...</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://theunn.com/hillary-clinton-during-visit-to-iit-gandhinagar-urges-students-to-shut-off-social-media-to-have-time-for-self-reflection/"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/INEN.png" loading="lazy" alt="Shoes" style="margin-top: 30px;" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">India News England News</h2>
+            <p>Hillary Clinton during visit to IIT Gandhinagar, She also visit the Sanjeevani Health Camp organized by
+              Nyasa at Palaj village...</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://indianewengland.com/hillary-clinton-visits-iit-gandhinagar-urges-students-to-shut-off-social-media-to-have-time-for-self-reflection/"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/telegraph.png" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">The Telegraph</h2>
+            <p>IIT Gandhinagar summer camp for children from villages, construction ...</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://www.telegraphindia.com/edugraph/news/nyasa-iitgn-holds-summer-camp-for-children-from-villages-construction-workers-colonies/cid/1869262"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/vibes_of_india.png" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Vibes of India</h2>
+            <p>Nyasa-IITGN Organised Summer Camp For Under Privileged Children</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://www.vibesofindia.com/nyasa-iitgn-organised-summer-camp-for-under-privileged-children/"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/india_education.png" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">India Education</h2>
+            <p>Nyasa-IIT Gandhinagar Organised A 10-Day Summer Camp For Children From ...</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://indiaeducationdiary.in/nyasa-iit-gandhinagar-organised-a-10-day-summer-camp-for-children-from-neighbouring-villages-and-iitgn-construction-workers-colonies/"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/the_live_ahmedabad.png" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">The Live Ahmedabad</h2>
+            <p>Nyasa-IITGN organised a 10-day summer camp for children from ...</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://theliveahmedabad.com/2022/06/08/nyasa-iitgn-organised-a-10-day-summer-camp-for-children-from-neighbouring-villages-and-iitgn-construction-workers-colonies/"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/chitralekha.png" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Chitralekha</h2>
+            <p>IITGNનું બાળકો માટેના સમર કેમ્પનું સફળ આયોજન</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://chitralekha.com/news/gujarat/nyasa-iitgn-organised-a-10-day-summer-camp-for-children/"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/dailyhunt.png" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Dailyhunt</h2>
+            <p>IITGNનું બાળકો માટેના સમર કેમ્પનું સફળ આયોજન</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://indus.dailyhunt.in/news/india/gujarati/chitralekha-epaper-chitrale/iitgnnu+balako+matena+samar+kempanu+saphal+aayojan-newsid-n393640134?pgs=N&pgn=1&ss=twt&nsk=gujarat-updates-Gujarat"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-72 bg-base-100 shadow-lg">
+          <figure><img src="../Assets/news/Ahmedabad Mirror.jpg" loading="lazy" alt="Shoes" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Ahmedabad Mirror</h2>
+            <p>IIT-Gn Project Helps Construction Workers’ Kids Go To English School ...</p>
+            <div class="card-actions justify-end pt-4">
+              <a href="https://www.ahmedabadmirror.com/iit-gn-project-helps-construction-workers-kids-go-to-english-school/81845946.html"
+                target="_blank" class="btn btn-primary">Read article</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <section class="footer" id="footer">
+
+  <div class="footer-image">
+
+      <!--   === Footer Contents Starts ===   -->
+      <div class="footer-contents">
+
+          <div class="footer-col footer-col-1">
+              <div class="col-title">
+                  <h4 style="color: rgb(255, 255, 255);">Activities</h4>
+
+              </div>
+              <hr style="margin-bottom: 5px;color: rgb(0, 0, 0);">
+              <div class="col-contents">
+
+                  <div class="contact-row">
+                      <ul>
+                          <li style="margin-top: 10px;"><a href="Pages/activities.html" style="text-decoration: none;">Akanksha : Empower Young Minds</a></li>
+                          <li style="margin-top: 10px;"><a href="Pages/activities.html" style="text-decoration: none;">Nyasa Summer Camp</a></li>
+                          <li style="margin-top: 10px;"><a href="Pages/activities.html" style="text-decoration: none;">Umeed - 'to give hope'. </a></li>
+                          <li style="margin-top: 10px;"><a href="Pages/activities.html" style="text-decoration: none;">Sanjeevani Medical Camp</a>
+                          </li>
+
+                      </ul>
+                  </div>
+
+              </div>
+
+
+
+          </div>
+          <div class="footer-col footer-col-2">
+              <div class="col-title">
+                  <h4 style="color: rgb(255, 255, 255);">News &  Articles</h4>
+              </div>
+              <hr style="margin-bottom: 5px;color: rgb(0, 0, 0);">
+              <div class="col-contents">
+
+                  <div class="contact-row">
+                      <ul>
+                          <li style="margin-top: 10px;"><a href="Pages/news.html" style="text-decoration: none;">India Education</a></li>
+                          <li style="margin-top: 10px;"><a href="Pages/news.html" style="text-decoration: none;">Gujarat Samachar Plus </a>
+                          </li>
+                          <li style="margin-top: 10px;"><a href="Pages/news.html" style="text-decoration: none;">Sandesh City Life</a></li>
+                          <li style="margin-top: 10px;"><a href="Pages/news.html" style="text-decoration: none;">Ahmedabad Mirror</a></li>
+
+
+                      </ul>
+                  </div>
+
+              </div>
+
+
+
+          </div>
+          <div class="footer-col footer-col-3">
+              <div class="col-title">
+                  <h4 style="color: rgb(255, 255, 255);">Follow Us On facebook</h4>
+              </div>
+            
+              <div class="col-contents">
+
+                  <div class="contact-row">
+                      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnyasa.iitgn%2F&tabs=timeline&width=300px&height=300px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300px" height="300px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                  </div>
+
+              </div>
+
+
+
+          </div>
+         
+          <div class="footer-col footer-col-4">
+              <div class="col-title">
+                  <h4 style="color: rgb(255, 255, 255);">Newsletter</h4>
+              </div>
+            
+              <div class="col-contents">
+
+                  <div class="contact-row">
+                      <form class="newsletter">
+                          <input type="email" placeholder="Your Email">
+                          <button class="newsletter-btn btn" type="submit">Subscribe</button>
+                      </form>
+                  </div>
+
+              </div>
+
+
+
+          </div>
+
+
+
+
+
+          <div class="footer-part-2">
+
+              <div class="footer-logo" style="display: flex; justify-content: center;">
+                  <!-- <h3 style="font-size: 18px;color: #c1c1c1;">You can Follow us on </h3> -->
+                  <div class="social-media-acounts">
+                      <ul class="social-ul" style="padding:  10px;">
+                          <li style="color: #4267B2;"><a href="" target="main;"
+                                  style="color: #4267B2;"><i class="fab fa-telegram"></i></a></li>
+                          <li style="color: #4267B2;"><a href="" target="main;"
+                                  style="color: #4267B2;"><i class="fab fa-facebook"></i></a></li>
+                          <li style="color: #E1306C;"><a href=""
+                                  target="main" style="color: #E1306C"><i class="fab fa-instagram"></i></a></li>
+                          <li style="color: #2867B2;"><i class="fab fa-twitter"></i></li>
+                          <li style="color: #ff0000;"><a href=""
+                                  target="main" style="color: #ff0000;"><i class="fab fa-youtube"></i></a></li>
+                      </ul>
+                  </div>
+                  <!-- <img src="infinite name.png" alt=""> -->
+              </div>
+              <div class="footer-part-2-col">
+                  <div class="footer-part-2-col-1">
+                      <div class="img-icon"><img src="../Assets/addr-icon.png" alt=""></div>
+                      <div class="footer-part-2-col-contant">
+                          <div class="footer-part-2-heading">
+                              <h3>Address</h3>
+                          </div>
+                          <p> Indian Institute of Technology, Palaj, Gujarat <br>Pincode no. 382355</p>
+                      </div>
+
+                  </div>
+                  <div class="footer-part-2-col-2">
+                      <div class="img-icon"><img src="../Assets/contact icon.png" alt=""></div>
+                      <div class="footer-part-2-col-contant">
+                          <div class="footer-part-2-heading">
+                              <h3>Contact Us</h3>
+                          </div>
+                          <p> + 91 84778-08227, + 91 80082-90429<br> <span
+                                  style="font-size: 12px;font-weight: 400;color: #c1c1c1;padding: 10px;">(08:00 AM
+                                  to 08:00 PM)</span> </p>
+                      </div>
+                  </div>
+                  <div class="footer-part-2-col-3">
+                      <div class="img-icon"><img src="../Assets/mail icon.png" alt=""></div>
+                      <div class="footer-part-2-col-contant">
+                          <div class="footer-part-2-heading">
+                              <h3>Send a message</h3>
+                          </div>
+                          <a class="text-white" href="mailto:nyasa@iitgn.ac.in">nyasa@iitgn.ac.in</a>
+                      </div>
+                  </div>
+              </div>
+
+              
+
+          </div>
+          <div class="copy-rights" style="margin-top: 2px;">
+              <p><a href=""
+                      style="text-decoration: none;color: #cececece;font-size: 13px;padding-bottom: 10px;">Terms
+                      of Use | Privacy Policy </a></p>
+              <p>Created By <a href="https://bidsuk.tech" target="_blank"
+                      style="text-decoration: none;"><b>Bidsuk Company</b> </a> <span class="far fa-copyright"
+                      style="color: #ffffff;"></span> 2025 All rights reserved.</p>
+          </div>
+
+      </div>
+
+
+</section>
+  <!-- js file -->
+  <script src="script.js"></script>
+
+  <script>
+    // Fetch and include nav.html content
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+      });
+  </script>
+  
+
+</body>
+
+</html>
